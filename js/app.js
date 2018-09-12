@@ -3,6 +3,7 @@ $(document).ready(function() {
       const deck = document.querySelector(".deck");
       let card = document.getElementsByClassName("card");
       let cards = [...card];
+      const stars = document.querySelectorAll(".fa-star");
 
       var moves = 0;
       var first_move = 0;
@@ -14,7 +15,8 @@ $(document).ready(function() {
       var modal = $('.modal');
       var turn_modal = $('.moves_taken');
       var timer_realtime = $('.time_taken');
-
+      var performance_rating = $('.performance_rating');
+      var performance = "3 Stars";
 
       var second = 0, minute = 0, hour = 0;
       var timer = document.querySelector(".timer");
@@ -70,6 +72,21 @@ $(document).ready(function() {
 
             function updateActivity(){
               $('.score-panel').find('.moves').text(turnTotal);
+              if (turnTotal > 10 && turnTotal < 20 ) {
+                for( i= 0; i < 3; i++){
+                  if(i > 1){
+                    stars[i].style.visibility = "collapse";
+                  }
+                }
+                performance = "2 Stars";
+              } else if (turnTotal > 21) {
+                for( i= 0; i < 3; i++){
+                  if(i > 0){
+                    stars[i].style.visibility = "collapse";
+                  }
+                }
+                performance = "1 Star";
+              }
             }
 
             function animateCard(card) {
@@ -117,12 +134,14 @@ $(document).ready(function() {
                timer.innerHTML = 0+" secs";
                startGame();
                updateActivity();
+               restartStarts();
             }
 
             function gameSuccess() {
                 modal.css('display', 'block');
+                performance_rating.text("Your performance is : " + performance)
                 timer_realtime.text("Your time was : " + minute + "mins " + second + " secs");
-                turn_modal.text("With " + turnTotal + " moves and " + "Stars.");
+                turn_modal.text("With " + turnTotal + " moves. ");
                     $('.play_again_button').click(function() {
                       modal.css('display', 'none');
                       cardsMatch = 0;
@@ -133,6 +152,13 @@ $(document).ready(function() {
 
                 };
 
+            function restartStarts(){
+              for( i= 0; i < 3; i++){
+                if(i > 0){
+                  stars[i].style.visibility = "visible";
+                }
+              }
+            }
 
             function startTimer(){
               interval = setInterval(function(){
