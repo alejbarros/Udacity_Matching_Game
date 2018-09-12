@@ -4,7 +4,7 @@
 
 * [Instructions](#Instructions)
 * [Contributing](#Contributing)
-* [Instructions to play game](#Instructions to play game)
+* [Game](#Game)
 * [Rules](#Rules)
 
 ## Instructions
@@ -22,7 +22,7 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
-## Instructions to play game
+## Game
 
 * Click on a card you wish.
 * Try revealing cards and working your memory to remember each unveiled card.
