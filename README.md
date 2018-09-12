@@ -2,8 +2,10 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* [Instructions](#Instructions)
+* [Contributing](#Contributing)
+* [Instructions to play game](#Instructions to play game)
+* [Rules of Rating stars](#raiting)
 
 ## Instructions
 
@@ -18,3 +20,16 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+##Instructions to play game
+
+* Click on a card you wish.
+* Try revealing cards and working your memory to remember each unveiled card.
+* Match cards properly with fewer moves and in faster time.
+
+##Rules of Rating stars
+
+* If you solve the matching game with less ten moves you win 3 stars in your performance.
+* If you solve the matching game between eleven and twenty moves you win 2 stars in your performance.
+* if you solve the matching game with more than twenty moves you win 1 star in your performance.
